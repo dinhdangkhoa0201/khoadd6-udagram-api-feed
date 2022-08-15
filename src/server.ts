@@ -13,6 +13,7 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
   await sequelize.addModels(V0_FEED_MODELS);
 
   console.debug("Initialize database connection...");
+  console.debug("POSTGRES_HOST", config.host);
   await sequelize.sync();
 
   const app = express();
