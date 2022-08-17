@@ -13,8 +13,8 @@ before_script:
 
 script:
     - docker --version
-    - docker build -t udagram-api-feed .
-    - docker tag udagram-api-feed dinhdangkhoa0201/udagram-api-feed
+    - docker build -t dinhdangkhoa0201/udagram-api-feed .
+#    - docker tag udagram-api-feed dinhdangkhoa0201/udagram-api-feed
 
 after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
