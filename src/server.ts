@@ -14,6 +14,9 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
 
   console.debug("Initialize database connection...");
   console.debug("POSTGRES_HOST", config.host);
+  console.debug("POSTGRES_USERNAME", config.username);
+  console.debug("POSTGRES_PASSWORD", config.password);
+  console.debug("POSTGRES_DATABASE", config.database);
   await sequelize.sync();
 
   const app = express();
